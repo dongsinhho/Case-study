@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import Task
 
-class TaskSerializer(serializers.Serializer):
+class TaskSerializer(serializers.ModelSerializer):
     title = serializers.CharField(required=True)
     description = serializers.CharField(required=False, allow_blank=True)
     due_date = serializers.DateField(required=False)

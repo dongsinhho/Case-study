@@ -1,2 +1,47 @@
-### GET ALL TASK
-GET 
+### GET TASK LIST
+GET http://127.0.0.1:8000/tasks
+
+### GET TASK LIST PAGE 2
+GET http://127.0.0.1:8000/tasks/?page=2
+
+### GET TASK LIST ORDER BY TITLE ASCENDING
+GET http://127.0.0.1:8000/tasks/?ordering=title
+
+### GET TASK LIST ORDER BY TITLE DESCENDING
+GET http://127.0.0.1:8000/tasks/?ordering=-title
+
+### SIMILAR WITH status and due_date
+GET http://127.0.0.1:8000/tasks/?ordering={your param}
+
+### SEARCH: GET http://127.0.0.1:8000/tasks/?search={your value}. For example:
+GET http://127.0.0.1:8000/tasks/?search=Task+56
+
+
+
+### CREATE TASK
+POST http://127.0.0.1:8000/tasks/
+Content-Type: application/json
+
+{
+    "title": "Task 56",
+    "description": "This is the description for task 56",
+    "due_date": "2024-12-11",
+    "status": "Pending"
+}
+
+### UPDATE TASK
+POST http://127.0.0.1:8000/tasks/
+Content-Type: application/json
+
+{
+    "title": "Task 56",
+    "description": "This is the description for task 56",
+    "due_date": "2024-12-11",
+    "status": "Completed"
+}
+
+### GET TASK DETAIL
+GET http://127.0.0.1:8000/tasks/56
+
+### DELETE
+DELETE http://127.0.0.1:8000/tasks/56/
