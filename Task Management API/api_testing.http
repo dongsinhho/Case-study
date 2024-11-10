@@ -19,7 +19,7 @@ GET http://127.0.0.1:8000/tasks/?search=Task+56
 
 
 ### CREATE TASK
-POST http://127.0.0.1:8000/tasks/
+POST http://127.0.0.1:8000/tasks
 Content-Type: application/json
 
 {
@@ -30,7 +30,7 @@ Content-Type: application/json
 }
 
 ### UPDATE TASK
-POST http://127.0.0.1:8000/tasks/
+POST http://127.0.0.1:8000/tasks
 Content-Type: application/json
 
 {
@@ -44,4 +44,4 @@ Content-Type: application/json
 GET http://127.0.0.1:8000/tasks/56
 
 ### DELETE
-DELETE http://127.0.0.1:8000/tasks/56/
+DELETE http://127.0.0.1:8000/tasks/56
